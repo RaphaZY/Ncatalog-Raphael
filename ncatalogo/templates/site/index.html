@@ -1,0 +1,108 @@
+{% extends 'layouts/layout.html' %}
+{% load static %}
+
+
+{% block title %}
+<title>loja</title>
+{% endblock %}
+
+
+{% block content %}
+{% include "partials/_alerts.html"%}
+    
+
+  <!--Header Inicio-->
+  {% include 'partials/_header.html' %}
+  <!--Header Fim-->
+  <!--Main Inicio-->  
+    <main>
+      <!--Section2 Inicio-->
+        <section>
+          <div class="promo">
+              <h2 class="d-flex justify-content-center robot py-4">Produtos</h2>
+          </div>
+          <div class=" text-center">
+            <div class="row" id="m">
+              
+              <div class="col-xl-3 col-md-6 col-sm-12 d-flex justify-content-center py-2">
+                <div class="card" style="width: 18rem;">
+                  <img src="{% static 'assets/img/sut.png' %}" class="card-img-top" alt="Produto1">
+                  <div class="card-body">
+                    <h5 class="card-title">Sutiã</h5>
+                    <a href="" class="btn robot btn-primary">Adicionar ao Carrinho</a>
+                  </div>
+                </div>
+              </div>
+
+              {% include 'partials/_cards.html' %}
+                  
+            </div>      
+          </div>        
+        </section>
+      <!--Section2 Fim-->    
+      <hr>
+      <!--Section3 Inicio-->  
+        <section class="sobre pt-5">
+          <Div class="d-flex justify-content-center px-5">
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <img src="{% static 'assets/img/sobree.png' %}" alt="sobre" height="90%" width="100%">
+              </div>
+              <div class="text-center col-lg-7 col-md-6 pt-5 tr">
+                <p class="fs-2 robot fw-bold">Presente para seu amigo construtor<br><br>A vida é curta demais para não comprar uma nova ferramenta.<br><br> Uma ferramenta boa serve como duas</b></p>
+              </div>
+            </div>
+          </Div>           
+        </section>
+      <!--Section3 Fim--> 
+      <hr>
+      <!--Section4 Inicio-->
+        <Section>
+          <Div class="d-flex justify-content-center px-5">
+            <div class="row">
+              <div class="col-lg-4 d-flex justify-content-center">
+                <div class="d-flex" style="align-items: center;">
+                  <img src="{% static 'assets/img/mascote.png' %}" alt="sobre" height="400px" width="90%">
+                </div>
+              </div>
+              <div class="text-center col-lg-7 pt-5">
+                <H1 class="fw-bold robot display-3">Ncatalogo</H1>
+                <H2 class="fw-bold robot">Nossa Historia</H2>
+                <p class="fw-medium fs-5"><br>
+                </div>
+            </div>
+          </Div>       
+        </Section>
+      <!--Section4 Fim--> 
+      <div class="promo"><br></div>
+      <!--Section5 Inicio-->
+        <section> 
+          <div class="promo">
+              <h2 class="d-flex justify-content-center robot py-4">Fale Com Nós</h2>
+          </div>
+          <div class="px-5">
+            <div class="my-5 row">
+              <label for="inputPassword" class="col-sm-2 robot col-form-label"><h4 class="fs-2"> Email:</h4></label>
+              <div class="col-sm-10">
+                <input type="Text" placeholder="Nome@Exemplo" class="form-control" id="Text">
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="inputPassword" class="col-sm-2 robot col-form-label"><h4 class="fs-2"> Mensagem:</h4></label>
+              <div class="col-sm-10">
+                <textarea class="form-control robot" placeholder="Texto" id="exampleFormControlTextarea1" rows="3" style="height: 119px;"></textarea>
+              </div>
+            </div>
+            <div class="text-center">
+              <button type="button" class="btn btn-outline-success robot">Enviar</button>
+            </div>
+          </div>
+      </section>
+  <!--Section5 Fim--> 
+    </main>
+  <!--Main Fim-->
+  <!--Footer Inicio-->
+  {% include 'partials/_footer.html' %}
+    
+  <!--Footer Fim-->  
+{% endblock %}

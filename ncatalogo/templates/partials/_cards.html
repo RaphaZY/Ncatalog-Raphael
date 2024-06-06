@@ -1,0 +1,18 @@
+{% load static %}
+{% for item in itens %}
+<div class="col-xl-3 col-md-6 col-sm-12 d-flex justify-content-center py-2">
+    <div class="card" style="width: 18rem;">
+      <img src="{{ item.path.url }}" class="card-img-top" alt="{{ item.name }}">
+      <div class="card-body">
+        <h5 class="card-title robot">{{item.title}}</h5>
+      </div>
+      <div class="d-flex" style="flex-direction: column;">
+        <a href="#"><img src="{% static 'assets/img/like.jpg' %}" alt="like" width="40px" height="40px"></a>
+        <textarea class="robot" id="comentario" name="comentario" rows="1" cols="12" placeholder="Comentario"></textarea>
+      </div>
+      <div class="py-1">
+        <button class="btn robot btn-lg btn-success btn-block" type="submit" name="enviar" href="">Enviar</button>
+      </div>
+    </div>
+  </div>
+{% endfor %}
